@@ -1,6 +1,7 @@
 ---
 import { NAVIGATION, SOCIAL_LINKS, SITE } from '@config/site';
-import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
+import { Package, Linkedin, Twitter, Facebook, Youtube, Instagram } from 'lucide-react';
+import { SiTelegram, SiWechat, SiXiaohongshu } from 'react-icons/si';
 ---
 
 <footer class="bg-slate-900 text-slate-300">
@@ -26,6 +27,42 @@ import { Package, Linkedin, Twitter, Facebook } from 'lucide-react';
             aria-label="LinkedIn"
           >
             <Linkedin className="w-5 h-5" />
+          </a>
+          <a
+            href={SOCIAL_LINKS.youtube}
+            class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-800 text-slate-400 hover:bg-red-600 hover:text-white transition-all"
+            aria-label="YouTube"
+          >
+            <Youtube className="w-5 h-5" />
+          </a>
+          <!-- Instagram -->
+          <a
+            href={SOCIAL_LINKS.instagram}
+            class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-800 text-slate-400 hover:bg-blue-600 hover:text-white transition-all"
+            aria-label="Instagram"
+          >
+            <Instagram className="w-5 h-5" />
+          </a>
+          <a
+            href={SOCIAL_LINKS.xiaohongshu}
+            class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-800 text-slate-400 hover:bg-rose-600 hover:text-white transition-all"
+            aria-label="小红书"
+          >
+            <SiXiaohongshu className="w-5 h-5" />
+          </a>
+          <a
+            href={SOCIAL_LINKS.wechat}
+            class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-800 text-slate-400 hover:bg-green-600 hover:text-white transition-all"
+            aria-label="微信"
+          >
+            <SiWechat className="w-5 h-5" />
+          </a>
+          <a
+            href={SOCIAL_LINKS.telegram}
+            class="w-10 h-10 flex items-center justify-center rounded-lg bg-slate-800 text-slate-400 hover:bg-sky-600 hover:text-white transition-all"
+            aria-label="Telegram"
+          >
+            <SiTelegram className="w-5 h-5" />
           </a>
           <a
             href={SOCIAL_LINKS.twitter}
