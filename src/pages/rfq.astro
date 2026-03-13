@@ -4,7 +4,7 @@ import Section from '@components/ui/Section.astro';
 import Card from '@components/ui/Card.astro';
 import RFQForm from '@components/react/RFQForm';
 import { Image } from 'astro:assets';
-import { FileText, Clock, Shield, CheckCircle2, Phone, Mail, MessageCircle, Award, TrendingUp, Users } from 'lucide-react';
+import { FileText, Clock, Shield, CheckCircle2, Phone, Mail, MessageCircle, Award, TrendingUp, Users, MapPin } from 'lucide-react';
 import rfqBgImg from '@assets/photo-1558618666-fcd25c85cd64.jpg';
 import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
 ---
@@ -75,21 +75,21 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
   <Section background="gray">
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
       <!-- Form -->
-      <div class="lg:col-span-2">
+      <!-- <div class="lg:col-span-2">
         <Card>
           <RFQForm client:load />
         </Card>
-      </div>
+      </div> -->
 
       <!-- Sidebar -->
-      <div class="space-y-6">
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:col-span-3">
         <!-- Contact Info Card -->
         <Card class="bg-linear-to-br from-blue-50 to-teal-50 border-blue-200">
           <div class="flex items-center mb-4">
             <div class="w-10 h-10 rounded-lg bg-linear-to-br from-blue-600 to-teal-600 flex items-center justify-center mr-3">
               <Phone className="w-5 h-5 text-white" />
             </div>
-            <h3 class="text-xl font-bold text-gray-900">Need Help?</h3>
+            <h3 class="text-xl font-bold text-gray-900">Telephone</h3>
           </div>
           <div class="space-y-4 text-sm">
             <div class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
@@ -98,7 +98,7 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
               </div>
               <div>
                 <div class="font-semibold text-gray-900">Phone</div>
-                <div class="text-gray-600 font-medium">1-800-LOGI-MANUF</div>
+                <div class="text-gray-600 font-medium">+86 158 2046 8614</div>
                 <div class="text-gray-500 text-xs">Mon-Fri, 8am-6pm EST</div>
               </div>
             </div>
@@ -108,13 +108,13 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
                 <Mail className="w-5 h-5 text-teal-600" />
               </div>
               <div>
-                <div class="font-semibold text-gray-900">Email</div>
-                <div class="text-gray-600 font-medium">quotes@astroflow.com</div>
+                <div class="font-semibold text-gray-900">Whatsapp</div>
+                <div class="text-gray-600 font-medium">+86 158 2046 8614</div>
                 <div class="text-gray-500 text-xs">24-hour response time</div>
               </div>
             </div>
 
-            <div class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+            <!-- <div class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <div class="w-10 h-10 rounded-lg bg-green-100 flex items-center justify-center shrink-0">
                 <MessageCircle className="w-5 h-5 text-green-600" />
               </div>
@@ -123,7 +123,7 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
                 <div class="text-gray-600 font-medium">Available on website</div>
                 <div class="text-gray-500 text-xs">Instant support</div>
               </div>
-            </div>
+            </div> -->
           </div>
         </Card>
 
@@ -131,39 +131,39 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
         <Card class="bg-linear-to-br from-primary-50 via-blue-50 to-secondary-50 border-primary-200">
           <div class="flex items-center mb-4">
             <div class="w-10 h-10 rounded-lg bg-linear-to-br from-primary-600 to-blue-600 flex items-center justify-center mr-3">
-              <Clock className="w-5 h-5 text-white" />
+              <Mail className="w-5 h-5 text-white" />
             </div>
-            <h3 class="text-xl font-bold text-gray-900">What to Expect</h3>
+            <h3 class="text-xl font-bold text-gray-900">Email</h3>
           </div>
           <ol class="space-y-4 text-sm">
             <li class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <span class="shrink-0 w-8 h-8 rounded-full bg-linear-to-br from-blue-600 to-blue-700 text-white flex items-center justify-center font-bold text-sm shadow-md">1</span>
               <div>
-                <span class="text-gray-900 font-semibold block">Response</span>
-                <span class="text-gray-600">We'll review your request within 24 hours</span>
+                <span class="text-gray-900 font-semibold block">Sales</span>
+                <span class="text-gray-600">ava@globallink-logistics.top</span>
               </div>
             </li>
             <li class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <span class="shrink-0 w-8 h-8 rounded-full bg-linear-to-br from-teal-600 to-teal-700 text-white flex items-center justify-center font-bold text-sm shadow-md">2</span>
               <div>
-                <span class="text-gray-900 font-semibold block">Consultation</span>
-                <span class="text-gray-600">Schedule a call to discuss your needs</span>
+                <span class="text-gray-900 font-semibold block">Customer Service</span>
+                <span class="text-gray-600">ava@globallink-logistics.top</span>
               </div>
             </li>
             <li class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <span class="shrink-0 w-8 h-8 rounded-full bg-linear-to-br from-green-600 to-green-700 text-white flex items-center justify-center font-bold text-sm shadow-md">3</span>
               <div>
-                <span class="text-gray-900 font-semibold block">Proposal</span>
-                <span class="text-gray-600">Receive a detailed quote and timeline</span>
+                <span class="text-gray-900 font-semibold block">Other Inquiries</span>
+                <span class="text-gray-600">ava@globallink-logistics.top</span>
               </div>
             </li>
-            <li class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+            <!-- <li class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <span class="shrink-0 w-8 h-8 rounded-full bg-linear-to-br from-purple-600 to-purple-700 text-white flex items-center justify-center font-bold text-sm shadow-md">4</span>
               <div>
                 <span class="text-gray-900 font-semibold block">Partnership</span>
                 <span class="text-gray-600">Begin your logistics journey with us</span>
               </div>
-            </li>
+            </li> -->
           </ol>
         </Card>
 
@@ -171,18 +171,18 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
         <Card class="bg-linear-to-br from-slate-50 to-gray-50 border-slate-200">
           <div class="flex items-center mb-4">
             <div class="w-10 h-10 rounded-lg bg-linear-to-br from-green-600 to-emerald-600 flex items-center justify-center mr-3">
-              <Award className="w-5 h-5 text-white" />
+              <MapPin className="w-5 h-5 text-white" />
             </div>
-            <h3 class="text-xl font-bold text-gray-900">Why Choose Us?</h3>
+            <h3 class="text-xl font-bold text-gray-900">Address</h3>
           </div>
           <ul class="space-y-3 text-sm">
             <li class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <div class="w-8 h-8 rounded-lg bg-green-100 flex items-center justify-center shrink-0">
                 <TrendingUp className="w-4 h-4 text-green-600" />
               </div>
-              <span class="text-gray-700 pt-1">25+ years of industry experience</span>
+              <span class="text-gray-700 pt-1">Shenzhen Global Link Supply Chain Co., Ltd</span>
             </li>
-            <li class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
+            <!-- <li class="flex items-start space-x-3 p-3 bg-white rounded-lg hover:shadow-md transition-shadow">
               <div class="w-8 h-8 rounded-lg bg-blue-100 flex items-center justify-center shrink-0">
                 <CheckCircle2 className="w-4 h-4 text-blue-600" />
               </div>
@@ -199,7 +199,7 @@ import warehouseImg from '@assets/photo-1563013544-824ae1b704d3.jpg';
                 <Users className="w-4 h-4 text-teal-600" />
               </div>
               <span class="text-gray-700 pt-1">24/7 customer support</span>
-            </li>
+            </li> -->
           </ul>
         </Card>
       </div>
