@@ -1,0 +1,29 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import Card from '../../components/ui/Card.astro';
+import { SERVICES } from '../../config/site';
+---
+
+<BaseLayout title="Our services - Global-link">
+  <Section background="white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-3xl">
+        <h1 class="text-4xl md:text-5xl font-bold text-slate-900">Our services</h1>
+        <p class="mt-4 text-lg text-slate-600">请选择一个服务查看详情。</p>
+      </div>
+
+      <div class="mt-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {SERVICES.map((s) => (
+          <Card hover class="p-0 overflow-hidden">
+            <a href={s.href} class="block p-6 hover:bg-blue-50 transition-colors">
+              <div class="text-base font-semibold text-slate-900">{s.name}</div>
+              <div class="mt-2 text-sm text-slate-600">进入页面</div>
+            </a>
+          </Card>
+        ))}
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
+

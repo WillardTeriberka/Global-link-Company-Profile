@@ -1,0 +1,112 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import { Image } from 'astro:assets';
+
+import heroBgImg from '@assets/photo-1553413077-190dd305871c.jpg';
+import featureImg from '@assets/warehousing.jpg';
+---
+
+<BaseLayout title="Warehousing - Global-link">
+  <!-- 1) 顶部图片背景 + 描述 -->
+  <section class="relative h-[56vh] min-h-[420px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <Image src={heroBgImg} alt="Warehousing" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-linear-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40"></div>
+    </div>
+
+    <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center px-4 py-2 mb-6 bg-white/10 backdrop-blur-sm text-white text-sm font-semibold rounded-full border border-white/15">
+          Our Services
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+          <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-teal-300">Warehousing</span>
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-200">Warehousing(Storage services / Inventory management / Fulfillment services including picking, packing, sorting etc / Cross-docking services / Stuffing and unstuffing / Palletized and loose cargo / Duty and tax free warehousing)</h2>
+        <p class="mt-6 text-lg md:text-xl text-slate-200 leading-relaxed max-w-3xl">
+          Warehousing refers to the safe, organized storage of goods in a professional facility until they are needed for distribution, manufacturing or sales.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) 标题 + 图片 -->
+  <Section background="gray">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="inline-block px-4 py-2 mb-4 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
+            Service highlights
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">
+            Warehousing services that keep you moving
+          </h2>
+          <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+            Our warehouses are equipped with storage racks, loading docks and efficient handling systems to ensure secure and optimized storage. Beyond storage, we provide complete inventory control and order fulfillment support to keep your supply chain efficient and responsive.
+          </p>
+          <ul class="mt-6 space-y-3 text-slate-700">
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+              <span><strong class="font-semibold">Storage</strong>: Bulk, pallet, shelving and bin storage for all types of goods.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-teal-600 shrink-0"></span>
+              <span><strong class="font-semibold">Order Fulfillment</strong>: Picking, packing, sorting and shipping for efficient order processing.</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+              <span><strong class="font-semibold">Inventory Management</strong>: Real-time tracking, stock control, cycle counting and accurate inventory records.</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
+          <div class="absolute inset-0 bg-linear-to-tr from-blue-600/10 via-transparent to-teal-600/10"></div>
+          <Image src={featureImg} alt="Warehouse operations" class="w-full h-[420px] object-cover" />
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- 3) 众多文字描述 -->
+  <Section background="white">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Warehousing</h2>
+
+        <div class="mt-6 space-y-6 text-slate-600 leading-relaxed text-lg">
+          <p>
+            Warehousing refers to the safe, organized storage of goods in a professional facility until they are needed for distribution, manufacturing or sales. Our warehouses are equipped with storage racks, loading docks and efficient handling systems to ensure secure and optimized storage.
+          </p>
+          <p>
+            Beyond storage, we provide complete inventory control and order fulfillment support to keep your supply chain efficient and responsive.
+          </p>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2">
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <h3 class="text-base font-bold text-slate-900">Core Services</h3>
+              <ul class="mt-4 space-y-2 text-slate-700">
+                <li><strong class="font-semibold">Storage</strong>: Bulk, pallet, shelving and bin storage for all types of goods.</li>
+                <li><strong class="font-semibold">Inventory Management</strong>: Real-time tracking, stock control, cycle counting and accurate inventory records.</li>
+                <li><strong class="font-semibold">Warehouse Management System (WMS)</strong>: Real-time visibility, automated processes and streamlined fulfillment.</li>
+                <li><strong class="font-semibold">Order Fulfillment</strong>: Picking, packing, sorting and shipping for efficient order processing.</li>
+                <li><strong class="font-semibold">Value-Added Services</strong>: Kitting, assembly, packaging, labeling and returns management.</li>
+              </ul>
+            </div>
+            <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+              <h3 class="text-base font-bold text-slate-900">Health &amp; Safety</h3>
+              <p class="mt-4 text-slate-700">
+                We strictly follow health and safety regulations, with proper training, equipment and inspections to protect both goods and staff.
+              </p>
+              <p class="mt-4 text-slate-700">
+                Effective warehousing improves inventory efficiency, meets customer demand, reduces costs and strengthens your competitive advantage.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
+

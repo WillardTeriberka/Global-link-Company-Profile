@@ -1,0 +1,122 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import { Image } from 'astro:assets';
+
+import heroBgImg from '@assets/photo-1450101499163-c8848c66ca85.jpg';
+import featureImg from '@assets/supply-chain-management_future.jpg';
+---
+
+<BaseLayout title="Supply Chain Management - Global-link">
+  <!-- 1) 顶部图片背景 + 描述 -->
+  <section class="relative h-[56vh] min-h-[420px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <Image src={heroBgImg} alt="Supply chain management" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-linear-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40"></div>
+    </div>
+
+    <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center px-4 py-2 mb-6 bg-white/10 backdrop-blur-sm text-white text-sm font-semibold rounded-full border border-white/15">
+          How We Help
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+          Supply Chain <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-teal-300">Management</span>
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-200">Supply Chain Management(Customized services / Labelling and stickering / Date tracking (expiry dates, manufacturing dates etc) / Handling controlled items / Batch handling / Specialized licenses / Tax-free import and re-export without duty-free zone restriction)</h2>
+        <p class="mt-6 text-lg md:text-xl text-slate-200 leading-relaxed max-w-3xl">
+          Supply chain management is the end-to-end coordination of all processes from raw material sourcing to final product delivery.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) 标题 + 图片 -->
+  <Section background="gray">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="inline-block px-4 py-2 mb-4 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
+            Our approach
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">
+            Aligning people, process, and systems end-to-end
+          </h2>
+          <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+            SCM integrates procurement, production, logistics, and inventory, while aligning suppliers, manufacturers, distributors, and customers for smooth collaboration.
+          </p>
+          <ul class="mt-6 space-y-3 text-slate-700">
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+              <span><strong class="font-semibold">Demand planning &amp; inventory control</strong></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-teal-600 shrink-0"></span>
+              <span><strong class="font-semibold">Transportation &amp; warehouse management</strong></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+              <span><strong class="font-semibold">Supplier management &amp; order fulfillment</strong></span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-teal-600 shrink-0"></span>
+              <span><strong class="font-semibold">Real-time tracking &amp; supply chain visibility</strong></span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl aspect-2728/1395">
+          <div class="absolute inset-0 bg-linear-to-tr from-blue-600/10 via-transparent to-teal-600/10"></div>
+          <Image src={featureImg} alt="Planning and analytics" class="w-full h-full object-cover" />
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- 3) 众多文字描述 -->
+  <Section background="white">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Supply Chain Management (SCM)</h2>
+
+        <div class="mt-6 space-y-6 text-slate-600 leading-relaxed text-lg">
+          <p>
+            Supply chain management is the end-to-end coordination of all processes from raw material sourcing to final product delivery. Its goal is to optimize efficiency, reduce costs, and maximize customer satisfaction.
+          </p>
+          <p>
+            SCM integrates procurement, production, logistics, and inventory, while aligning suppliers, manufacturers, distributors, and customers for smooth collaboration.
+          </p>
+        </div>
+
+        <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-6">
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <h3 class="text-base font-bold text-slate-900">Key Functions</h3>
+            <ul class="mt-4 space-y-2 text-slate-700">
+              <li>Demand planning &amp; inventory control</li>
+              <li>Transportation &amp; warehouse management</li>
+              <li>Supplier management &amp; order fulfillment</li>
+              <li>Real-time tracking &amp; supply chain visibility</li>
+            </ul>
+          </div>
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <h3 class="text-base font-bold text-slate-900">Why SCM Matters</h3>
+            <ul class="mt-4 space-y-2 text-slate-700">
+              <li>Improves efficiency and reduces operational costs</li>
+              <li>Enhances delivery speed and service quality</li>
+              <li>Strengthens competitiveness in the global market</li>
+              <li>Supports sustainable and risk-resilient operations</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="text-base font-bold text-slate-900">Technology &amp; Collaboration</h3>
+          <p class="mt-4 text-slate-700 leading-relaxed">
+            Modern SCM relies on advanced systems including ERP, WMS, TMS, and real-time visibility tools. Success depends on cross-party cooperation, continuous improvement, and smart technology adoption.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
+

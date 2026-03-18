@@ -1,0 +1,143 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import Section from '../components/ui/Section.astro';
+import Card from '../components/ui/Card.astro';
+import { Image } from 'astro:assets';
+import partnerLogosImg from '../assets/logos.png';
+import ctaBgImg from '../assets/photo-1553413077-190dd305871c.jpg';
+
+const advantages = [
+  {
+    title: 'E-commerce Fulfilment',
+    description:
+      'Your online order, fulfilled. We manage storage, picking, packing & shipping directly to your customers.',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13l-1.5 7.5M17 13l1.5 7.5M9 21a1 1 0 100-2 1 1 0 000 2zm10 0a1 1 0 100-2 1 1 0 000 2z" />
+    </svg>`,
+  },
+  {
+    title: 'Crowdfunding Fulfillment',
+    description:
+      'Provides rewards fulfillment for crowdfunding projects, helps startup brands complete product delivery.',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 20h5v-2a4 4 0 00-4-4h-1M9 20H2v-2a4 4 0 014-4h1m7-4a4 4 0 10-8 0 4 4 0 008 0zm6 2a3 3 0 10-6 0 3 3 0 006 0z" />
+    </svg>`,
+  },
+  {
+    title: 'Amazon Fulfillment',
+    description:
+      'FBA Prep services for Amazon warehouse replenishment and overseas warehousing.',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 13V7a2 2 0 00-2-2H6a2 2 0 00-2 2v6m16 0l2 8H2l2-8m16 0H4m8-8v8" />
+    </svg>`,
+  },
+  {
+    title: 'B2B Fulfillment',
+    description:
+      'Streamlined order fulfillment and distribution for bulk, business-to-business transactions.',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 7h13l5 5v9a2 2 0 01-2 2H3a2 2 0 01-2-2V9a2 2 0 012-2zm13 0V3H6v4m10 0l-4 4m4-4l4 4" />
+    </svg>`,
+  },
+  {
+    title: 'Competition advantage',
+    description:
+      'We provide one-stop logistics and supply chain services for international brands entering the Chinese market, including international freight forwarding, customs clearance, warehousing, drop-shipping, nationwide distribution, e-commerce warehousing and return processing.',
+    icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
+    </svg>`,
+  },
+];
+---
+
+<BaseLayout title="Competition advantage">
+  <Section background="white">
+    <div class="text-center mb-12">
+      <h1 class="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
+        Competition <span class="gradient-text">advantage</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-600 max-w-4xl mx-auto">
+        Fulfillment and market-entry services designed to help brands operate faster, smoother, and with better control across China.
+      </p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+      {advantages.map((item, index) => (
+        <Card hover class="text-center animate-fadeInUp group" style={`animation-delay: ${index * 0.1}s`}>
+          <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-xl bg-linear-to-br from-blue-500 to-teal-500 text-white shadow-lg group-hover:scale-110 transition-transform">
+            <div set:html={item.icon} />
+          </div>
+          <h3 class="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
+          <p class="text-gray-600 leading-relaxed whitespace-nowrap overflow-hidden text-ellipsis">
+            {item.description}
+          </p>
+        </Card>
+      ))}
+    </div>
+  </Section>
+
+  <div class="w-full">
+    <div class="mx-auto w-full max-w-[1920px]">
+      <Image
+        src={partnerLogosImg}
+        alt="Partner logos"
+        class="w-full h-auto object-contain"
+        loading="lazy"
+        decoding="async"
+      />
+    </div>
+  </div>
+
+  <section class="relative py-32 overflow-hidden">
+    <div class="absolute inset-0">
+      <Image
+        src={ctaBgImg}
+        alt="Service excellence background"
+        class="w-full h-full object-cover"
+        width={2070}
+        height={1380}
+      />
+      <div class="absolute inset-0 bg-linear-to-r from-blue-900/95 to-teal-900/95"></div>
+    </div>
+
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start text-white">
+        <div>
+          <div class="inline-block px-4 py-2 mb-4 bg-white/10 backdrop-blur-sm text-xs font-semibold rounded-full uppercase tracking-wide">
+            Service Excellence
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            Target Market &amp; Customer Base
+          </h2>
+          <div class="space-y-3 text-slate-200 text-base md:text-lg">
+            <p>
+              <span class="font-semibold">Primary Customers:</span> DTC brands, digital-first merchants, and cross-border e-commerce sellers.
+            </p>
+            <p>
+              <span class="font-semibold">DTC Brands:</span> 70% of overseas DTC brands have their supply chain supported by Global-link.
+            </p>
+            <p>
+              <span class="font-semibold">Geographic Distribution:</span> 50% North American brands, 30% European brands, 20% Asian brands (Malaysia, Singapore, etc.).
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <div class="inline-block px-4 py-2 mb-4 bg-white/10 backdrop-blur-sm text-xs font-semibold rounded-full uppercase tracking-wide">
+            Brand philosophy
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold mb-4">
+            All-in-One Fulfillment Partner
+          </h2>
+          <ul class="space-y-3 text-slate-200 text-base md:text-lg list-disc list-inside">
+            <li>Global-link as your single, integrated fulfillment partner.</li>
+            <li>Seamlessly connect your e-commerce store and automate order flow.</li>
+            <li>We store, pick, pack, and ship globally with full visibility.</li>
+            <li>You and your customers can track every step in real time.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+</BaseLayout>
+

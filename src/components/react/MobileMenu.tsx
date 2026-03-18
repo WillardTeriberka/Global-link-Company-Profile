@@ -1,6 +1,6 @@
 import * as Dialog from '@radix-ui/react-dialog';
 import { Menu, X } from 'lucide-react';
-import { NAVIGATION } from '../../config/site';
+import { NAVIGATION, SERVICES } from '../../config/site';
 
 export default function MobileMenu() {
   return (
@@ -19,23 +19,48 @@ export default function MobileMenu() {
           <Dialog.Title className="sr-only">Navigation Menu</Dialog.Title>
           <Dialog.Description className="sr-only">Main navigation menu</Dialog.Description>
           <div className="container mx-auto px-4 py-6 space-y-2">
-            {NAVIGATION.map((item) => (
-              <Dialog.Close asChild key={item.href}>
-                <a
-                  href={item.href}
-                  className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all"
-                >
-                  {item.name}
-                </a>
-              </Dialog.Close>
-            ))}
+            {NAVIGATION.map((item) => {
+              const isServices = item.name === 'Our services';
+              if (isServices) {
+                return (
+                  <div key={item.href} className="pt-2">
+                    <div className="px-4 py-2 text-xs font-semibold tracking-wider text-slate-500 uppercase">
+                      Our services
+                    </div>
+                    <div className="space-y-1">
+                      {SERVICES.map((s) => (
+                        <Dialog.Close asChild key={s.href}>
+                          <a
+                            href={s.href}
+                            className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all"
+                          >
+                            {s.name}
+                          </a>
+                        </Dialog.Close>
+                      ))}
+                    </div>
+                  </div>
+                );
+              }
+
+              return (
+                <Dialog.Close asChild key={item.href}>
+                  <a
+                    href={item.href}
+                    className="block px-4 py-3 text-base font-medium text-slate-700 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-all"
+                  >
+                    {item.name}
+                  </a>
+                </Dialog.Close>
+              );
+            })}
             <div className="pt-4">
               <Dialog.Close asChild>
                 <a
                   href="/rfq"
                   className="block text-center px-6 py-3 text-sm font-semibold text-white bg-linear-to-r from-blue-600 to-blue-700 hover:from-blue-700 hover:to-blue-800 rounded-lg shadow-md transition-all"
                 >
-                  Request Quote
+                  Contact
                 </a>
               </Dialog.Close>
             </div>

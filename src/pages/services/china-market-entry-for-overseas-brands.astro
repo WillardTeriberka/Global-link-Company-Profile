@@ -1,0 +1,135 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import { Image } from 'astro:assets';
+
+import heroBgImg from '@assets/photo-1607082349566-187342175e2f.jpg';
+import featureImg from '@assets/photo-1587854692152-cbe660dbde88.jpg';
+---
+
+<BaseLayout title="China Market Entry for Overseas Brands - Global-link">
+  <!-- 1) 顶部图片背景 + 描述 -->
+  <section class="relative h-[56vh] min-h-[420px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <Image src={heroBgImg} alt="China market entry logistics" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-linear-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40"></div>
+    </div>
+
+    <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+          <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-teal-300">China Market Entry for Overseas Brands</span>
+        </h1>
+        <p class="mt-6 text-lg md:text-xl text-slate-200 leading-relaxed max-w-3xl">
+          We provide one-stop logistics and supply chain services for international brands entering the Chinese market, including international freight forwarding, customs clearance, warehousing, drop-shipping, nationwide distribution, e-commerce warehousing and return processing.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) 标题 + 图片 -->
+  <Section background="gray">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="inline-block px-4 py-2 mb-4 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
+            Project delivery
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">
+            Core Service Advantages
+          </h2>
+          <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+            From regulatory navigation to customs clearance and last-mile distribution, we design a tailored plan and execute it with speed, accuracy, and accountability.
+          </p>
+          <ul class="mt-6 space-y-3 text-slate-700">
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+              <span><strong class="font-semibold">Compliance First</strong>: documentation review and regulatory alignment to avoid delays</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-teal-600 shrink-0"></span>
+              <span><strong class="font-semibold">Multi-Modal Transportation</strong>: air, sea, land, and intermodal routes via key hubs</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+              <span><strong class="font-semibold">Smooth Customs Clearance</strong>: green channels, inspection coordination, and duty settlement</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-teal-600 shrink-0"></span>
+              <span><strong class="font-semibold">End-to-End Visibility</strong>: real-time tracking, WMS/TMS integration, 24/7 support</span>
+            </li>
+          </ul>
+        </div>
+
+        <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
+          <div class="absolute inset-0 bg-linear-to-tr from-blue-600/10 via-transparent to-teal-600/10"></div>
+          <Image src={featureImg} alt="Cross-border coordination" class="w-full h-[420px] object-cover" />
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- 3) 众多文字描述 -->
+  <Section background="white">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Core Service Advantages</h2>
+
+        <div class="mt-6 grid grid-cols-1 md:grid-cols-2 gap-6 text-slate-700">
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <h3 class="text-base font-bold text-slate-900">✅ Compliance First</h3>
+            <ul class="mt-4 space-y-2">
+              <li>Navigate Chinese import regulations (including licensing, inspection, and quarantine) for general goods, perishables, electronics, hazardous materials, and more</li>
+              <li>Professional document review (customs declaration, commercial invoice, packing list, certificate of origin) to avoid delays</li>
+              <li>Ensure compliance with data security and cross-border logistics licensing requirements</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <h3 class="text-base font-bold text-slate-900">✅ Multi-Modal Transportation</h3>
+            <ul class="mt-4 space-y-2">
+              <li>Tailored transport solutions: Air freight (3-5 days for time-sensitive/high-value goods), Sea freight (cost-effective for bulk cargo), Land transport (for neighboring countries like Russia/Vietnam)</li>
+              <li>Integrated "Sea/Air + Cold Chain + Domestic Distribution" system for perishables (e.g., fresh produce, pharmaceuticals)</li>
+              <li>Access to China’s key hubs (Shanghai, Guangzhou, Qingdao, Xi’an) via rail-sea intermodal routes</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <h3 class="text-base font-bold text-slate-900">✅ Smooth Customs Clearance</h3>
+            <ul class="mt-4 space-y-2">
+              <li>Utilize customs green channels for fresh/green goods with appointment-based inspection and same-day release</li>
+              <li>"Single-Window" tax payment support (WeChat/Alipay compatible) for efficient duty settlement</li>
+              <li>Expert handling of special goods (food, cosmetics, machinery) with required inspection reports and certifications</li>
+            </ul>
+          </div>
+
+          <div class="rounded-2xl border border-slate-200 bg-slate-50 p-6">
+            <h3 class="text-base font-bold text-slate-900">✅ End-to-End Visibility</h3>
+            <ul class="mt-4 space-y-2">
+              <li>Real-time tracking system for cargo status across international transport, customs clearance, and domestic delivery</li>
+              <li>Smart logistics platform integration (WMS/TMS) for inventory management and order fulfillment</li>
+              <li>Dedicated account manager for 24/7 support and issue resolution</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="mt-12 text-2xl md:text-3xl font-bold text-slate-900">Service Process</h2>
+        <ol class="mt-6 space-y-3 text-slate-700 text-lg leading-relaxed list-decimal pl-6">
+          <li><strong class="font-semibold">Pre-Entry Consultation</strong>: Customs compliance assessment + transport plan design</li>
+          <li><strong class="font-semibold">International Transport</strong>: Multi-modal shipping with cargo insurance coverage</li>
+          <li><strong class="font-semibold">Customs Clearance</strong>: Document submission + inspection coordination + tax payment</li>
+          <li><strong class="font-semibold">Domestic Distribution</strong>: Nationwide delivery (including "last-mile" service for B2B/B2C)</li>
+          <li><strong class="font-semibold">After-Sales Support</strong>: Cargo status reporting + claim handling (if applicable)</li>
+        </ol>
+
+        <div class="mt-10 rounded-2xl border border-slate-200 bg-slate-50 p-6">
+          <h3 class="text-base font-bold text-slate-900">Industry Expertise</h3>
+          <p class="mt-4 text-slate-700 text-lg leading-relaxed">
+            Automotive, Aerospace, Electronics, Retail, FMCG, Fresh Produce, Pharmaceuticals, Machinery, and Project Cargo.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
+

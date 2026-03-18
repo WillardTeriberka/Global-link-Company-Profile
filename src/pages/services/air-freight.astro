@@ -1,0 +1,101 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import Section from '../../components/ui/Section.astro';
+import { Image } from 'astro:assets';
+
+import heroBgImg from '@assets/air-freight2.jpg';
+import featureImg from '@assets/air-freight.jpg';
+---
+
+<BaseLayout title="Air Freight - Global-link">
+  <!-- 1) 顶部图片背景 + 描述 -->
+  <section class="relative h-[56vh] min-h-[420px] flex items-center overflow-hidden">
+    <div class="absolute inset-0">
+      <Image src={heroBgImg} alt="Air freight" class="w-full h-full object-cover" />
+      <div class="absolute inset-0 bg-linear-to-r from-slate-900/90 via-slate-900/70 to-slate-900/40"></div>
+    </div>
+
+    <div class="container mx-auto relative z-10 px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <div class="inline-flex items-center px-4 py-2 mb-6 bg-white/10 backdrop-blur-sm text-white text-sm font-semibold rounded-full border border-white/15">
+          Our Services
+        </div>
+        <h1 class="text-4xl md:text-6xl font-bold text-white leading-tight">
+          Air <span class="text-transparent bg-clip-text bg-linear-to-r from-blue-300 to-teal-300">Freight</span>
+        </h1>
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-200">Air Freight(General Cargo / Perishables / Hazardous Materials / Oversized/Overweight Cargo / Express Delivery)</h2>
+        <p class="mt-6 text-lg md:text-xl text-slate-200 leading-relaxed max-w-3xl">
+          Air freight is the fast, secure choice for long-distance goods transportation via commercial or cargo airlines. Ideal for time-sensitive, high-value shipments—including electronics, pharmaceuticals, perishables and automotive parts.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2) 标题 + 图片 -->
+  <Section background="gray">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+        <div>
+          <div class="inline-block px-4 py-2 mb-4 bg-blue-100 text-blue-800 text-sm font-semibold rounded-full">
+            Service highlights
+          </div>
+          <h2 class="text-3xl md:text-4xl font-bold text-slate-900">
+            <!-- 更快的交付，更稳定的承诺 -->
+          </h2>
+          <p class="mt-5 text-lg text-slate-600 leading-relaxed">
+            
+          </p>
+        </b>
+          <p>
+            We manage the full process: booking, coordination and delivery. While air freight costs more than sea/road transport, it offers unmatched speed and security for critical goods.
+          </p>
+          <!-- <ul class="mt-6 space-y-3 text-slate-700">
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+              <span><strong class="font-semibold">Time-critical</strong>：按交付窗口优化路线与班次</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-teal-600 shrink-0"></span>
+              <span><strong class="font-semibold">Door-to-door</strong>：对接提货、机场操作与末端配送</span>
+            </li>
+            <li class="flex gap-3">
+              <span class="mt-2 w-2 h-2 rounded-full bg-blue-600 shrink-0"></span>
+              <span><strong class="font-semibold">Visibility</strong>：关键节点状态更新与异常响应</span>
+            </li>
+          </ul> -->
+        </div>
+
+        <div class="relative overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-xl">
+          <div class="absolute inset-0 bg-linear-to-tr from-blue-600/10 via-transparent to-teal-600/10"></div>
+          <Image src={featureImg} alt="Air operations" class="w-full h-[420px] object-cover" />
+        </div>
+      </div>
+    </div>
+  </Section>
+
+  <!-- 3) 众多文字描述 -->
+  <Section background="white">
+    <div class="px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl">
+        <h2 class="text-2xl md:text-3xl font-bold text-slate-900">Key Air Freight Types</h2>
+
+        <div class="mt-6 space-y-6 text-slate-600 leading-relaxed text-lg">
+          <p>
+            General Cargo：Non-perishable, non-hazardous goods in standard containers/pallets.</p>
+          <p>
+            Perishables：Time-sensitive items (fresh produce, flowers, meds) with temperature-controlled handling.
+          </p>
+          <p>
+            Hazardous Materials：Chemicals, batteries, explosives—compliant with strict safety regulations.</p>
+          <p>
+            Oversized/Overweight Cargo：Large/heavy items requiring specialized equipment and handling.
+          </p>
+          <p>
+            Express Delivery：Guaranteed 24-48hr delivery for urgent packages.
+          </p>
+        </div>
+      </div>
+    </div>
+  </Section>
+</BaseLayout>
+

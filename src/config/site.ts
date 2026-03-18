@@ -6,13 +6,22 @@ export const SITE = {
   author: 'Global-link',
 } as const;
 
+export const SERVICES = [
+  { name: 'Sea Freight', href: '/services/sea-freight' },
+  { name: 'Air Freight', href: '/services/air-freight' },
+  { name: 'Warehousing', href: '/services/warehousing' },
+  { name: 'Supply Chain Management', href: '/services/supply-chain-management' },
+  { name: 'China Market Entry for Overseas Brands', href: '/services/china-market-entry-for-overseas-brands' },
+] as const;
+
 export const NAVIGATION = [
   { name: 'Home', href: '/' },
   { name: 'Capabilities', href: '/capabilities' },
-  { name: 'Use Cases', href: '/use-cases' },
-  { name: 'Facilities', href: '/facilities' },
+  // { name: 'Use Cases', href: '/use-cases' },
+  { name: 'Competition advantage', href: '/competition-advantage' },
+  { name: 'Our services', href: '/services' },
   // { name: 'Request Quote', href: '/rfq' }, 
-  { name: 'Documentation', href: '/documentation' },
+  // { name: 'Documentation', href: '/documentation' },
 ] as const;
 
 export const SOCIAL_LINKS = {
