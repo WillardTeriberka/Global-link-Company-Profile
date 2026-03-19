@@ -40,7 +40,7 @@ const advantages = [
     </svg>`,
   },
   {
-    title: 'Competition advantage',
+    title: 'China Market Entry for Overseas Brands: Domestic Warehousing & Distribution',
     description:
       'We provide one-stop logistics and supply chain services for international brands entering the Chinese market, including international freight forwarding, customs clearance, warehousing, drop-shipping, nationwide distribution, e-commerce warehousing and return processing.',
     icon: `<svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -61,14 +61,14 @@ const advantages = [
       </p>
     </div>
 
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 items-stretch">
       {advantages.map((item, index) => (
-        <Card hover class="text-center animate-fadeInUp group" style={`animation-delay: ${index * 0.1}s`}>
+        <Card hover class="text-center animate-fadeInUp group h-full flex flex-col min-h-[260px]" style={`animation-delay: ${index * 0.1}s`}>
           <div class="flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-xl bg-linear-to-br from-blue-500 to-teal-500 text-white shadow-lg group-hover:scale-110 transition-transform">
             <div set:html={item.icon} />
           </div>
           <h3 class="text-xl font-bold text-gray-900 mb-3">{item.title}</h3>
-          <p class="text-gray-600 leading-relaxed whitespace-nowrap overflow-hidden text-ellipsis">
+          <p class="text-gray-600 leading-relaxed whitespace-normal break-words flex-1">
             {item.description}
           </p>
         </Card>
@@ -107,10 +107,10 @@ const advantages = [
             Service Excellence
           </div>
           <h2 class="text-3xl md:text-4xl font-bold mb-4">
-            Target Market &amp; Customer Base
+            Core Value
           </h2>
           <div class="space-y-3 text-slate-200 text-base md:text-lg">
-            <p>
+            <!-- <p>
               <span class="font-semibold">Primary Customers:</span> DTC brands, digital-first merchants, and cross-border e-commerce sellers.
             </p>
             <p>
@@ -118,7 +118,10 @@ const advantages = [
             </p>
             <p>
               <span class="font-semibold">Geographic Distribution:</span> 50% North American brands, 30% European brands, 20% Asian brands (Malaysia, Singapore, etc.).
-            </p>
+            </p> -->
+            Behind every great brand is a powerful supply chain. We are that foundation for your global success. 
+            Helping your brand reach the world and build its reputation.
+
           </div>
         </div>
 

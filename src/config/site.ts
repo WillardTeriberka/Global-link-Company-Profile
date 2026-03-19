@@ -25,13 +25,13 @@ export const NAVIGATION = [
 ] as const;
 
 export const SOCIAL_LINKS = {
-  linkedin: 'https://linkedin.com/company/yourcompany',
-  youtube: 'https://youtube.com/yourcompany',
-  instagram: 'https://instagram.com/yourcompany',
-  xiaohongshu: 'https://www.xiaohongshu.com/user/profile/yourcompany',
+  linkedin: 'https://www.linkedin.com/in/na-na-5ba7141b9/',
+  youtube: 'https://www.youtube.com/@Global-LinkAva',
+  instagram: 'https://www.instagram.com/global_linklogistics/',
+  xiaohongshu: 'https://www.xiaohongshu.com/user/profile/678e3ff3000000000e01f58a',
   wechat: 'https://weixin.qq.com/',
   telegram: 'https://t.me/yourcompany',
   twitter: 'https://twitter.com/yourcompany',
-  facebook: 'https://facebook.com/yourcompany',
+  facebook: 'https://www.facebook.com/profile.php?id=61582642962316',
 } as const;
 
